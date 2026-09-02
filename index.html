@@ -147,7 +147,7 @@
     AFRAME.registerComponent('gestor-juego', {
       init: function () {
         this.puntos = 0;
-        this.segundosRestantes = 30;
+        this.segundosRestantes = 120;
         this.jugando = true;
 
         // Guardamos referencias a los textos del HUD para no buscarlos cada vez
@@ -166,14 +166,14 @@
       },
 
       iniciarCronometro: function () {
-        // setInterval ejecuta esta función cada 1000 ms (1 segundo) hasta que la paremos
+        // setInterval ejecuta esta función cada 2000 ms (2 segundo) hasta que la paremos
         this.temporizador = setInterval(() => {
           this.segundosRestantes--;
           this.hudTiempo.setAttribute('value', `Tiempo: ${this.segundosRestantes}`);
           if (this.segundosRestantes <= 0) {
             this.terminarJuego();
           }
-        }, 1000);
+        }, 2000);
       },
 
       sumarPunto: function () {
@@ -187,7 +187,7 @@
         if (!this.jugando) return;
         this.puntos--;
         // Si NO quieres que baje de 0, quita el // de la línea de abajo:
-        // if (this.puntos < 0) this.puntos = 0;
+        if (this.puntos < 0) this.puntos = 0;
         this.hudPuntos.setAttribute('value', `Puntos: ${this.puntos}`);
       },
 
@@ -201,10 +201,10 @@
 
       reiniciar: function () {
         this.puntos = 0;
-        this.segundosRestantes = 30;
+        this.segundosRestantes = 120;
         this.jugando = true;
         this.hudPuntos.setAttribute('value', 'Puntos: 0');
-        this.hudTiempo.setAttribute('value', 'Tiempo: 30');
+        this.hudTiempo.setAttribute('value', 'Tiempo: 120');
         this.hudFinal.setAttribute('visible', false);
         this.botonReiniciar.setAttribute('visible', false);
         // Movemos el objetivo a un punto nuevo para empezar limpio
