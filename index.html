@@ -284,36 +284,8 @@
     <a-torus class="clickable objetivo" objetivo radius="0.28" radius-tubular="0.06"
              material="shader: flat; color: #F26177"
              animation="property: scale; to: 0.5 0.5 0.5; rotation; to: 0 360 0; loop: true; dur: 4000"></a-torus>
-    
-    <a-dodecahedron class= "clickable objetivo" objetivo radius="1" 
-                    material="shader: flat; color: #F26177"
-                    animation="property: scale; to: 0.5 0.5 0.5; rotation; to: 0 360 0; loop: true; dur: 4000"></a-dodecahedron>
- 
-    <a-icosahedron position class= "clickable objetivo" objetivo radius="1" 
-                    material="shader: flat; color: #F26177"
-                    animation="property: scale; to: 0.5 0.5 0.5; rotation; to: 0 360 0; loop: true; dur: 4000"></a-icosahedron>
 
- 
-    <a-octahedron position class= "clickable objetivo" objetivo radius="1" 
-                    material="shader: flat; color: #F26177"
-                    animation="property: scale; to: 0.5 0.5 0.5; rotation; to: 0 360 0; loop: true; dur: 4000"></a-octahedron>
- 
-    <a-tetrahedron position class= "clickable objetivo" objetivo radius="1" 
-                    material="shader: flat; color: #F26177"
-                    animation="property: scale; to: 0.5 0.5 0.5; rotation; to: 0 360 0; loop: true; dur: 4000"></a-tetrahedron>
-
-    <!--
-      TRIÁNGULO (plano). Por ser plano, se le pone "side: double" en el
-      material para que también se vea desde atrás. Los vertex-a/b/c son
-      sus 3 esquinas. Le puse animación de giro (no de "latido") para que
-      no quede de canto y se vuelva invisible.
-    -->
-    <!--
-    <a-triangle class="clickable objetivo" objetivo
-                vertex-a="0 0.4 0" vertex-b="-0.4 -0.3 0" vertex-c="0.4 -0.3 0"
-                material="shader: flat; color: #F26177; side: double"
-                animation="property: rotation; to: 0 360 0; loop: true; dur: 4000"></a-triangle>
-       -->
+  
     <!--
       *** NUEVO *** FIGURAS QUE RESTAN
       Usan la clase "clickable obstaculo" y el componente "obstaculo", así
@@ -336,22 +308,7 @@
              material="shader: flat; color: #EDF57F"
              animation="property: scale; to: 0.75 0.75 0.75; rotation; to: 180 360 90; loop: true; dur: 4000"></a-torus>
 
-     <a-dodecahedron class= "clickable objetivo" obstaculo radius="0.5" 
-                    material="shader: flat; color: #EDF57F"
-                    animation="property: scale; to: 0.75 0.75 0.75; rotation; to: 180 360 90; loop: true; dur: 4000"></a-dodecahedron>
- 
-    <a-icosahedron position class= "clickable objetivo" obstaculo radius="0.5" 
-                    material="shader: flat; color: #EDF57F"
-                    animation="property: scale; to: 0.75 0.75 0.75; rotation; to: 180 360 90; loop: true; dur: 4000"></a-icosahedron>
-
- 
-    <a-octahedron position class= "clickable objetivo" obstaculo radius="0.5" 
-                    material="shader: flat; color: #EDF57F"
-                    animation="property: scale; to: 0.75 0.75 0.75; rotation; to: 180 360 90; loop: true; dur: 4000"></a-octahedron>
- 
-    <a-tetrahedron position class= "clickable objetivo" obstaculo radius="0.5" 
-                    material="shader: flat; color: #EDF57F"
-                    animation="property: scale; to: 0.75 0.75 0.75; rotation; to: 180 360 90; loop: true; dur: 4000"></a-tetrahedron>
+     
 
     <!--
       Botón de reiniciar: es un objeto normal del MUNDO (no de la cámara),
