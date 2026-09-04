@@ -178,14 +178,14 @@
 
       sumarPunto: function () {
         if (!this.jugando) return;
-        this.puntos++;
+        this.puntos+=5;
         this.hudPuntos.setAttribute('value', `Puntos: ${this.puntos}`);
       },
 
       // *** NUEVO *** gemelo de sumarPunto, pero resta en vez de sumar
       restarPunto: function () {
         if (!this.jugando) return;
-        this.puntos--;
+        this.puntos-=2;
         // Si NO quieres que baje de 0, quita el // de la línea de abajo:
         if (this.puntos < 0) this.puntos = 0;
         this.hudPuntos.setAttribute('value', `Puntos: ${this.puntos}`);
